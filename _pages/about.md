@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
+{% include base_path %}
+
 I am a first-year Ph.D. candidate at the **HKUST NLP Group**, Department of Computer Science and Engineering, Hong Kong University of Science and Technology (HKUST), where I am fortunate to be advised by [Prof. Junxian He](https://jxhe.github.io/). 
 
 Prior to joining HKUST, I received my B.Eng. degree from **Shanghai Jiao Tong University (SJTU)** in June 2024. During my undergraduate studies at SJTU, I was honored to receive the **Zhiyuan Honor Scholarship** and began conducting research under the supervision of Prof. Junxian He.
@@ -41,33 +43,29 @@ Recent News & Updates
 * **[2024]** Graduated with B.Eng. from Shanghai Jiao Tong University and commenced Ph.D. studies at HKUST.
 * **[2023]** Co-authored papers *"C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models"* and *"Composing Parameter-Efficient Modules with Arithmetic Operations"* accepted to **NeurIPS 2023**.
 
-Selected Publications
+Publications
 ======
-*(See full list under [Publications](/publications/))*
+You can also view these on the dedicated [Publications page](/LJT-Homepage/publications/) or on my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate).
 
-1. **SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond**  
-   **Junteng Liu**, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He  
-   *arXiv preprint*, 2025  
-
-2. **On the Perception Bottleneck of VLMs for Chart Understanding**  
-   **Junteng Liu**, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He  
-   *arXiv preprint*, 2025 \| [Code (Vision4Chart)](https://github.com/Vicent0205)
-
-3. **On the Universal Truthfulness Hyperplane Inside LLMs**  
-   **Junteng Liu**, Shiqi Chen, Yu Cheng, Junxian He  
-   *Conference on Empirical Methods in Natural Language Processing (**EMNLP**)*, 2024 \| [Code](https://github.com/Vicent0205)
-
-4. **In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation**  
-   Shiqi Chen, Miao Xiong, **Junteng Liu**, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He  
-   *International Conference on Machine Learning (**ICML**)*, 2024
-
-5. **C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models**  
-   Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, **Junteng Liu**, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He  
-   *Advances in Neural Information Processing Systems (**NeurIPS**)*, 2023
-
-6. **Composing Parameter-Efficient Modules with Arithmetic Operations**  
-   Jinghan Zhang, Shiqi Chen, **Junteng Liu**, Junxian He  
-   *Advances in Neural Information Processing Systems (**NeurIPS**)*, 2023
+{% if site.publication_category %}
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h3>{{ category[1].title }}</h3>
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
 
 Skills & Competencies
 ======
