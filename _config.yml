@@ -14,8 +14,8 @@ title_separator          : "-"
 name                     : &name "Junteng Liu"
 description              : &description "Junteng Liu's academic homepage - Ph.D. candidate at HKUST NLP Group"
 url                      : "https://mchustin.github.io"
-baseurl                  : ""
-repository               : "mchustin/academicpages.github.io"
+baseurl                  : "/LJT-Homepage"
+repository               : "mchustin/LJT-Homepage"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
