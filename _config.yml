@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Junteng Liu | Homepage"
+title                    : "Junteng Liu"
 title_separator          : "-"
 name                     : &name "Junteng Liu"
-description              : &description "Academic homepage of Junteng Liu, Ph.D. candidate at HKUST NLP Group."
+description              : &description "Personal academic homepage of Junteng Liu."
 url                      : "https://mchustin.github.io"
 baseurl                  : "/LJT-Homepage"
 repository               : "mchustin/LJT-Homepage"
@@ -23,10 +23,10 @@ repository               : "mchustin/LJT-Homepage"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Junteng Liu (刘军腾)"
+  name             : "Junteng Liu"
   pronouns         : 
-  bio              : "Ph.D. Candidate in CS at HKUST NLP Group"
-  location         : "Hong Kong SAR"
+  bio              : "First-year PhD candidate at HKUST NLP Group"
+  location         : 
   employer         : "Hong Kong University of Science and Technology"
   uri              : 
   email            : "jliugi@connect.ust.hk"
@@ -84,9 +84,9 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Preprints & Working Papers'
+    title: 'Preprints'
   conferences:
-    title: 'Conference Proceedings'
+    title: 'Conference Papers'
 
 # Site Settings
 teaser                   : 
@@ -116,7 +116,7 @@ facebook:
   app_id                 : 
   publisher              : 
 og_image                 : 
-og_description           : "Academic homepage of Junteng Liu - Ph.D. candidate at HKUST NLP Group."
+og_description           : "Personal academic homepage of Junteng Liu."
 social:
   type                   : Person
   name                   : "Junteng Liu"
@@ -124,7 +124,6 @@ social:
     - "https://github.com/Vicent0205"
     - "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
     - "https://x.com/junteng88716710"
-    - "mailto:jliugi@connect.ust.hk"
 
 # Analytics
 analytics:
